@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/global.css';
+import Countdown from '../../components/CountDown.astro';
+
+---
+
+<BaseLayout title="Mi evento increible" lang="it" partnersLabel="Partner">
+  <header>
+    <h1>🎉 Benvenuto al Nostro Evento Straordinario</h1>
+    <p>Unisciti a noi il <strong>2 e 3 ottobre</strong> presso <strong>Scuola Colombiana di Ingegneria Julio Garavito</strong></p>
+    <Countdown />
+  </header>
+
+  <main>
+    <section>
+      <h2>Informazioni sull'evento</h2>
+      <p>
+        Scopri cosa rende speciale questo evento: ospiti, attività e tante
+        sorprese!
+      </p>
+    </section>
+
+    <section>
+      <h2>Programma</h2>
+      <ul>
+        <li>10:00 – Apertura</li>
+        <li>11:00 – Cerimonia di apertura</li>
+        <li>15:00 – Ospiti speciali</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Luogo</h2>
+      <p>[Nome del luogo], [Indirizzo]</p>
+    </section>
+  </main>
+</BaseLayout>

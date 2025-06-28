@@ -1,0 +1,10 @@
+---
+const currentPath = Astro.url.pathname;
+const subPath = currentPath.replace(/^\/(en|es|it)(\/|$)/, '/');
+---
+
+<nav class="lang-switcher">
+  <a href={`/en${subPath}`} hreflang="en">🇬🇧 EN</a>
+  <a href={`/it${subPath}`} hreflang="it">🇮🇹 IT</a>
+  <a href={`/es${subPath}`} hreflang="es">🇪🇸 ES</a>
+</nav>

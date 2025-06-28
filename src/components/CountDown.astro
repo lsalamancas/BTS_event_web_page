@@ -1,0 +1,38 @@
+---
+const targetDate = new Date("2025-10-02T00:00:00");
+const timestamp = targetDate.getTime();
+---
+
+<div id="countdown" class="countdown">
+    <p>⏳ Countdown to the event:</p>
+    <div id="timer" class="countdown-timer">Loading...</div>
+    <script is:inline>
+        window.addEventListener("DOMContentLoaded", () => {
+            const timerEl = document.getElementById("timer");
+            const target = new Date(1759353600000); // October 2, 2025
+
+            function updateCountdown() {
+            const now = new Date();
+            const diff = target - now;
+
+            if (!timerEl) return;
+
+            if (diff <= 0) {
+                timerEl.textContent = "🎉 The event has started!";
+                clearInterval(interval);
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            timerEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+
+        updateCountdown();
+        const interval = setInterval(updateCountdown, 1000);
+        });
+    </script>
+</div>

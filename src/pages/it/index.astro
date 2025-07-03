@@ -6,33 +6,102 @@ import Countdown from '../../components/CountDown.astro';
 ---
 
 <BaseLayout title="Mi evento increible" lang="it" partnersLabel="Partner">
-  <header>
-    <h1>🎉 Benvenuto al Nostro Evento Straordinario</h1>
-    <p>Unisciti a noi il <strong>2 e 3 ottobre</strong> presso <strong>Scuola Colombiana di Ingegneria Julio Garavito</strong></p>
-    <Countdown />
-  </header>
+<header>
+  <h1>SEMINARIO INTERNAZIONALE</h1>
+  <h2>Tendenze e futuro nell'analisi del movimento umano ad alta tecnologia</h2>
+  <p>Unisciti a noi il <strong>2 e 3 ottobre</strong> presso la <strong>Escuela Colombiana de Ingeniería Julio Garavito</strong></p>
+</header>
 
-  <main>
-    <section>
-      <h2>Informazioni sull'evento</h2>
-      <p>
-        Scopri cosa rende speciale questo evento: ospiti, attività e tante
-        sorprese!
-      </p>
-    </section>
+<Countdown />
 
-    <section>
-      <h2>Programma</h2>
-      <ul>
-        <li>10:00 – Apertura</li>
-        <li>11:00 – Cerimonia di apertura</li>
-        <li>15:00 – Ospiti speciali</li>
-      </ul>
-    </section>
+<section class="about-collage-layout">
+  <div class="text">
+    <h2>Primo Seminario Internazionale sull'Analisi del Movimento</h2>
+    <p>
+      Partecipa al <strong>Primo Seminario Internazionale sull'Analisi del Movimento</strong>, un evento all'avanguardia che riunisce pionieri, ricercatori e professionisti che esplorano il confine dell'analisi del movimento umano attraverso metodologie ad alta tecnologia.
+    </p>
+    <p>
+      Dalle prestazioni sportive alla diagnostica clinica, dal design ergonomico all'innovazione ingegneristica—questo seminario metterà in luce l’impatto trasversale dell’analisi del movimento. Se ti appassiona la biomeccanica, la riabilitazione, la robotica o la scienza dello sport, questo è il tuo spazio.
+    </p>
+    <ul>
+      <li>🎯 <strong>Settori:</strong> Analisi sportiva, applicazioni cliniche, ingegneria, ergonomia</li>
+      <li>🌍 <strong>Modalità:</strong> Ibrida (in presenza e da remoto)</li>
+      <li>💸 <strong>Costo:</strong> Partecipazione gratuita</li>
+      <li>🎁 <strong>Premio:</strong> Il miglior lavoro presentato riceverà un regalo speciale</li>
+      <li>🇨🇴 <strong>Tappa fondamentale:</strong> L’evento segnerà la fondazione della Società Colombiana di Biomeccanica</li>
+    </ul>
+    <p><em>Costruiamo una comunità in cui la conoscenza si muove, e il movimento ispira il progresso.</em></p>
+  </div>
+  <div class="collage">
+    <div class="top-img">
+      <img src="/images/37.jpg" alt="Main Event Image" />
+    </div>
+    <div class="bottom-imgs">
+      <img src="/images/OIP.webp" alt="Engineering 1" />
+      <img src="/images/OIP1.webp" alt="Engineering 2" />
+    </div>
+  </div>
+</section>
 
-    <section>
-      <h2>Luogo</h2>
-      <p>[Nome del luogo], [Indirizzo]</p>
-    </section>
-  </main>
+<section class="speaker-section">
+  <h2>🌎 Relatori Internazionali</h2>
+  <div class="speaker-grid">
+    <div class="speaker-card">
+      <div class="speaker-img">
+        <img src="/images/sergio_lerma.jpg" alt="sergio" />
+      </div>
+      <h3>Prof. Dr. Sergio Lerma Lara</h3>
+      <p>Fisioterapista specializzato in analisi del movimento | Spagna</p>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-img">
+        <img src="/images/marcos_crespo.jpg" alt="marcos" />
+      </div>
+      <h3>Ing. Marcos Crespo</h3>
+      <p>Bioingegnere con esperienza nell'analisi del movimento umano | Argentina</p>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-img">
+        <img src="/images/dr_duplat.webp" alt="duplat" />
+      </div>
+      <h3>Dr. Jose Luis Duplat</h3>
+      <p>Ortopedico | Colombia</p>
+    </div>
+  </div>
+</section>
+
+<section class="inscription-section">
+  <div class="inscription-text">
+    <h2>📝 Iscrizioni Aperte</h2>
+    <p>Registrati ora per partecipare a questo evento entusiasmante ricco di innovazione e scoperta!</p>
+    <a href="https://forms.gle/your-google-form-id" target="_blank" class="inscription-btn">
+      Iscriviti
+    </a>
+  </div>
+</section>
+
+<section class="schedule-section">
+  <div class="text">
+    <h2>Programma</h2>
+    <div>
+      <img src="/images/schedule-page.jpg" alt="Programma" />
+    </div>
+  </div>
+</section>
+
+<section class="location">
+  <h2>Posizione</h2>
+  <p>Scuola Colombiana di Ingegneria Julio Garavito</p>
+  <div style="max-width: 800px; margin: 0 auto;">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.925996551909!2d-74.04517872321934!3d4.782716240937396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f85e32ae0ca4b%3A0x5edd4c74e8f7220c!2sEscuela%20Colombiana%20de%20Ingenier%C3%ADa%20Julio%20Garavito!5e0!3m2!1ses!2sco!4v1750989891106!5m2!1ses!2sco"
+      width="100%"
+      height="300"
+      style="border:0; border-radius: 8px; margin-top: 1rem;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</section>
 </BaseLayout>

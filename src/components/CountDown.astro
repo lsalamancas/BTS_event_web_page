@@ -3,36 +3,48 @@ const targetDate = new Date("2025-10-02T00:00:00");
 const timestamp = targetDate.getTime();
 ---
 
-<div id="countdown" class="countdown">
-    <p>⏳ Countdown to the event:</p>
-    <div id="timer" class="countdown-timer">Loading...</div>
-    <script is:inline>
-        window.addEventListener("DOMContentLoaded", () => {
-            const timerEl = document.getElementById("timer");
-            const target = new Date(1759353600000); // October 2, 2025
+<div class="countdown-section">
+  <!-- <h2>⏳ Countdown to the Event</h2> -->
+  <div class="countdown-timer">
+    <div id="days"><span>00</span><label>Days</label></div>
+    <div id="hours"><span>00</span><label>Hours</label></div>
+    <div id="minutes"><span>00</span><label>Minutes</label></div>
+    <div id="seconds"><span>00</span><label>Seconds</label></div>
+  </div>
 
-            function updateCountdown() {
-            const now = new Date();
-            const diff = target - now;
+  <script is:inline>
+    window.addEventListener("DOMContentLoaded", () => {
+      const target = new Date("2025-10-02T00:00:00");
+      const daysEl = document.getElementById("days").querySelector("span");
+      const hoursEl = document.getElementById("hours").querySelector("span");
+      const minutesEl = document.getElementById("minutes").querySelector("span");
+      const secondsEl = document.getElementById("seconds").querySelector("span");
 
-            if (!timerEl) return;
+      function updateCountdown() {
+        const now = new Date();
+        const diff = target - now;
 
-            if (diff <= 0) {
-                timerEl.textContent = "🎉 The event has started!";
-                clearInterval(interval);
-                return;
-            }
+        if (diff <= 0) {
+          daysEl.textContent = "00";
+          hoursEl.textContent = "00";
+          minutesEl.textContent = "00";
+          secondsEl.textContent = "00";
+          return;
+        }
 
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-            const minutes = Math.floor((diff / (1000 * 60)) % 60);
-            const seconds = Math.floor((diff / 1000) % 60);
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
 
-            timerEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-            }
-
-        updateCountdown();
-        const interval = setInterval(updateCountdown, 1000);
-        });
-    </script>
+        daysEl.textContent = days.toString().padStart(2, "0");
+        hoursEl.textContent = hours.toString().padStart(2, "0");
+        minutesEl.textContent = minutes.toString().padStart(2, "0");
+        secondsEl.textContent = seconds.toString().padStart(2, "0");
+      }
+      console.log(document.getElementById("days"));
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    });
+  </script>
 </div>

@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Mi evento increible</title><link rel="stylesheet" href="../styles/global.css"><link rel="stylesheet" href="/BTS_event_web_page/_astro/index.D900yozY.css"></head> <body> <div class="global-logo"> <img src="/images/logo_event.png" alt="Event Logo"> </div> <!-- 
+<nav class="lang-switcher">
+  <a href={`/en${subPath}`} hreflang="en">🇬🇧 EN</a>
+  <a href={`/it${subPath}`} hreflang="it">🇮🇹 IT</a>
+  <a href={`/es${subPath}`} hreflang="es">🇪🇸 ES</a>
+</nav> --><div class="language-selector"> <a href="/en/" class="lang-option"> <img src="/images/en_flag.png" alt="English flag"> <span>English</span> </a><a href="/es/" class="lang-option"> <img src="/images/es_flag.png" alt="Español flag"> <span>Español</span> </a><a href="/it/" class="lang-option"> <img src="/images/it_flag.png" alt="Italiano flag"> <span>Italiano</span> </a> </div> <main>  <header> <h1>SEMINARIO INTERNACIONAL</h1> <h2>Tendencias y futuro en el análisis del movimiento humano con tecnología de punta</h2> <p>Únete el <strong>2 y 3 de octubre</strong> en la <strong>Escuela Colombiana de Ingeniería Julio Garavito</strong></p> </header> <div class="countdown-section"> <!-- <h2>⏳ Countdown to the Event</h2> --> <div class="countdown-timer"> <div id="days"><span>00</span><label>Days</label></div> <div id="hours"><span>00</span><label>Hours</label></div> <div id="minutes"><span>00</span><label>Minutes</label></div> <div id="seconds"><span>00</span><label>Seconds</label></div> </div> <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const target = new Date("2025-10-02T00:00:00");
+      const daysEl = document.getElementById("days").querySelector("span");
+      const hoursEl = document.getElementById("hours").querySelector("span");
+      const minutesEl = document.getElementById("minutes").querySelector("span");
+      const secondsEl = document.getElementById("seconds").querySelector("span");
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = target - now;
+
+        if (diff <= 0) {
+          daysEl.textContent = "00";
+          hoursEl.textContent = "00";
+          minutesEl.textContent = "00";
+          secondsEl.textContent = "00";
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        daysEl.textContent = days.toString().padStart(2, "0");
+        hoursEl.textContent = hours.toString().padStart(2, "0");
+        minutesEl.textContent = minutes.toString().padStart(2, "0");
+        secondsEl.textContent = seconds.toString().padStart(2, "0");
+      }
+      console.log(document.getElementById("days"));
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    });
+  </script> </div> <section class="about-collage-layout"> <div class="text"> <h2>Primer Seminario Internacional sobre Análisis del Movimiento</h2> <p>
+Acompáñanos en el <strong>Primer Seminario Internacional sobre Análisis del Movimiento</strong>, un evento innovador que reúne a pioneros, investigadores y profesionales que exploran la frontera del análisis del movimiento humano a través de metodologías tecnológicas avanzadas.
+</p> <p>
+Desde el rendimiento deportivo hasta el diagnóstico clínico, pasando por el diseño ergonómico y la innovación en ingeniería, este seminario resaltará el impacto del análisis del movimiento en múltiples disciplinas. Si te apasiona la biomecánica, la rehabilitación, la robótica o las ciencias del deporte, este espacio es para ti.
+</p> <ul> <li>🎯 <strong>Áreas:</strong> Análisis deportivo, aplicaciones clínicas, ingeniería, ergonomía</li> <li>🌍 <strong>Modalidad:</strong> Híbrido (presencial y remoto)</li> <li>💸 <strong>Costo:</strong> Participación gratuita</li> <li>🎁 <strong>Premio:</strong> El mejor trabajo presentado recibirá un obsequio especial</li> <li>🇨🇴 <strong>Hito:</strong> El evento marcará la fundación de la Sociedad Colombiana de Biomecánica</li> </ul> <p><em>Construyamos una comunidad donde el conocimiento se mueva, y el movimiento inspire el progreso.</em></p> </div> <div class="collage"> <div class="top-img"> <img src="/images/37.jpg" alt="Main Event Image"> </div> <div class="bottom-imgs"> <img src="/images/OIP.webp" alt="Engineering 1"> <img src="/images/OIP1.webp" alt="Engineering 2"> </div> </div> </section> <section class="speaker-section"> <h2>🌎 Conferencistas Internacionales</h2> <div class="speaker-grid"> <div class="speaker-card"> <div class="speaker-img"> <img src="/images/sergio_lerma.jpg" alt="sergio"> </div> <h3>Prof. Dr. Sergio Lerma Lara</h3> <p>Fisioterapeuta especializado en análisis del movimiento | España</p> </div> <div class="speaker-card"> <div class="speaker-img"> <img src="/images/marcos_crespo.jpg" alt="marcos"> </div> <h3>Ing. Marcos Crespo</h3> <p>Bioingeniero con experiencia en análisis del movimiento humano | Argentina</p> </div> <div class="speaker-card"> <div class="speaker-img"> <img src="/images/dr_duplat.webp" alt="duplat"> </div> <h3>Dr. Jose Luis Duplat</h3> <p>Ortopedista | Colombia</p> </div> </div> </section> <section class="inscription-section"> <div class="inscription-text"> <h2>📝 Inscripciones Abiertas</h2> <p>Regístrate ahora para ser parte de este emocionante evento lleno de innovación y descubrimiento.</p> <a href="https://forms.gle/your-google-form-id" target="_blank" class="inscription-btn">
+Inscribirse
+</a> </div> </section> <section class="schedule-section"> <div class="text"> <h2>Agenda</h2> <div> <img src="/images/schedule-page.jpg" alt="Agenda"> </div> </div></section> <section class="location"> <h2>Ubicación</h2> <p>Escuela Colombiana de Ingeniería Julio Garavito</p> <div style="max-width: 800px; margin: 0 auto;"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.925996551909!2d-74.04517872321934!3d4.782716240937396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f85e32ae0ca4b%3A0x5edd4c74e8f7220c!2sEscuela%20Colombiana%20de%20Ingenier%C3%ADa%20Julio%20Garavito!5e0!3m2!1ses!2sco!4v1750989891106!5m2!1ses!2sco" width="100%" height="300" style="border:0; border-radius: 8px; margin-top: 1rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </div> </section>  </main> <footer> <h2>Patrocinadores</h2> <div class="footer-logos"> <img src="/public/images/logo_eci.png" alt="Partner 1"> <img src="/public/images/logo_TLM.png" alt="Partner 2"> <img src="/public/images/logo_uvalle.png" alt="Partner 3"> <img src="/public/images/blue_logo.png" alt="Partner 4"> </div> <p>&copy; 2025 TLM Andina S.A.S</p> </footer> </body></html> 

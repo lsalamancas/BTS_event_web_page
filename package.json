@@ -5,11 +5,14 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "touch dist/.nojekyll && gh-pages -d dist --dotfiles",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "astro": "^5.10.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }

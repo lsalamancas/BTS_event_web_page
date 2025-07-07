@@ -1,11 +1,15 @@
 ---
 const currentPath = Astro.url.pathname;
 const subPath = currentPath.replace(/^\/(en|es|it)(\/|$)/, '/');
+const base = import.meta.env.BASE_URL;
 const languages = [
   { code: 'en', label: 'English', flag: '/images/en_flag.png' },
   { code: 'es', label: 'Español', flag: '/images/es_flag.png' },
   { code: 'it', label: 'Italiano', flag: '/images/it_flag.png' }
+
 ];
+
+
 ---
 <!-- 
 <nav class="lang-switcher">
@@ -14,11 +18,13 @@ const languages = [
   <a href={`/es${subPath}`} hreflang="es">🇪🇸 ES</a>
 </nav> -->
 
+
 <div class="language-selector">
   {languages.map(lang => (
-    <a href={`/${lang.code}/`} class="lang-option">
-      <img src={lang.flag} alt={`${lang.label} flag`} />
+    <a href={`${base}${lang.code}/`} class="lang-option">
+      <img src={`${base}${lang.flag}`} alt={`${lang.label} flag`} />
       <span>{lang.label}</span>
     </a>
   ))}
 </div>
+

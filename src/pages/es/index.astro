@@ -6,13 +6,14 @@ import Countdown from '../../components/CountDown.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="Mi evento increíble" lang="es" partnersLabel="Patrocinadores">
+<BaseLayout title="Seminario Internacional BTS Colombia " lang="es" partnersLabel="Patrocinadores", contactLabel="Contacto">
   <header>
     <h1>SEMINARIO INTERNACIONAL</h1>
-    <h2>Tendencias y futuro en el análisis del movimiento humano con tecnología de punta</h2>
+    <h2>Tendencias y futuro en el análisis del movimiento humano con tecnología BTS</h2>
     <p>
-      Únete el <strong>2 y 3 de octubre</strong> en la
-      <strong>Escuela Colombiana de Ingeniería Julio Garavito</strong>
+      <span class="event-date">📅 <strong>2 y 3 de octubre</strong></span>
+    </p> 
+    <p> en la <strong>Escuela Colombiana de Ingeniería Julio Garavito</strong>
     </p>
   </header>
 
@@ -20,9 +21,8 @@ const base = import.meta.env.BASE_URL;
 
   <section class="about-collage-layout">
     <div class="text">
-      <h2>Primer Seminario Internacional sobre Análisis del Movimiento</h2>
       <p>
-        Acompáñanos en el <strong>Primer Seminario Internacional sobre Análisis del Movimiento</strong>, un evento pionero...
+        Acompáñanos en el <strong>Seminario Internacional sobre Análisis del Movimiento</strong> que se llevará a cabo en Colombia:
       </p>
       <ul>
         <li>🎯 <strong>Áreas:</strong> Análisis deportivo, aplicaciones clínicas, ingeniería, ergonomía</li>
@@ -31,68 +31,141 @@ const base = import.meta.env.BASE_URL;
         <li>🎁 <strong>Incentivo:</strong> El mejor trabajo presentado recibirá un obsequio especial</li>
         <li>🇨🇴 <strong>Hito:</strong> Este evento marcará la fundación de la Sociedad Colombiana de Biomecánica</li>
       </ul>
-      <p><em>Construyamos juntos una comunidad donde el conocimiento se mueva—y el movimiento impulse el progreso.</em></p>
+      <p><em>Construyamos juntos una comunidad donde el conocimiento se mueva y el movimiento impulse el progreso.</em></p>
     </div>
     <div class="collage">
-      <div class="top-img">
-        <img src={`${base}images/37.jpg`} alt="Main Event Image" />
+      <div class="left-img">
+        <img src={`${base}images/OIP1.webp`} alt="Main Event Image" />
       </div>
-      <div class="bottom-imgs">
-        <img src={`${base}images/OIP.webp`} alt="Engineering 1" />
-        <img src={`${base}images/OIP1.webp`} alt="Engineering 2" />
+      <div class="rigth-img">
+        <img src={`${base}images/37.jpg`} alt="Engineering 1" />
+        <img src={`${base}images/OIP.webp`} alt="Engineering 2" />
       </div>
     </div>
   </section>
 
   <section class="speaker-section">
-    <h2>🌎 Conferencistas Internacionales</h2>
+    <h2>🌎 Conferencistas Invitados</h2>
     <div class="speaker-grid">
       <div class="speaker-card">
-        <div class="speaker-img">
-          <img src={`${base}images/sergio_lerma.jpg`} alt="sergio" />
-        </div>
+        <a href="https://www.lasallecentrouniversitario.es/lerma-lara-sergio/" target="_blank" rel="noopener noreferrer"> 
+          <div class="speaker-img">
+            <img src={`${base}images/sergio_lerma.jpg`} alt="sergio" />
+          </div>
+        </a> 
         <h3>Prof. Dr. Sergio Lerma Lara</h3>
-        <p>Fisioterapeuta especializado en análisis del movimiento | España</p>
+        <p>Fisioterapeuta Centro Universitario La Salle | España</p>
       </div>
       <div class="speaker-card">
-        <div class="speaker-img">
-          <img src={`${base}images/marcos_crespo.jpg`} alt="marcos" />
-        </div>
+        <a href="https://www.linkedin.com/in/mkcrespo/?originalSubdomain=ar" target="_blank" rel="noopener noreferrer">
+          <div class="speaker-img">
+            <img src={`${base}images/marcos_crespo.jpg`} alt="marcos" />
+          </div>
+        </a> 
         <h3>Ing. Marcos Crespo</h3>
-        <p>Bioingeniero con experiencia en análisis del movimiento humano | Argentina</p>
+        <p>Bioingeniero Instituto Fleni | Argentina</p>
       </div>
       <div class="speaker-card">
-        <div class="speaker-img">
-          <img src={`${base}images/dr_duplat.webp`} alt="duplat" />
-        </div>
+
+        <a href="https://www.institutoroosevelt.com/directorio-medico/" target="_blank" rel="noopener noreferrer">
+          <div class="speaker-img">
+            <img src={`${base}images/dr_duplat.webp`} alt="duplat" />
+          </div>
+        </a>
         <h3>Dr. Jose Luis Duplat</h3>
-        <p>Ortopedista | Colombia</p>
+        <p>Ortopedista Instituto Roosevelt | Colombia</p>
       </div>
     </div>
   </section>
 
- <section class="inscription-section">
-  <div class="inscription-text">
-    <h2>📝 Inscripciones Abiertas</h2>
-    <p>¡Regístrate ahora para ser parte de este emocionante evento lleno de innovación y descubrimiento!</p>
-    <a href="https://forms.gle/your-google-form-id" target="_blank" class="inscription-btn">
-      Inscribirse
-    </a>
+<section class="inscription-section">
+  <h2>📝 Inscripciones Abiertas</h2>
+  <p>¡Regístrate para ser parte de este emocionante evento lleno de innovación y descubrimiento!</p>
+
+  <div class="abstract-blocks">
+    <div class="abstract-box">
+      <h3>👨‍⚕️ Usuarios de tecnología BTS</h3>
+      <p>Si eres usuario de sistemas BTS, estás invitado a enviar un resumen de tu experiencia o aplicación clínica, deportiva o laboral.</p>
+    </div>
+
+    <div class="abstract-box">
+      <h3>🎓 Estudiantes</h3>
+      <p>Los estudiantes pueden enviar trabajos de investigación en curso, resultados preliminares o propuestas relacionadas con el análisis del movimiento.</p>
+    </div>
   </div>
+
+  <div class="abstract-deadlines">
+    <p>📅 <strong>Fecha límite para envío de resúmenes:</strong> 20 de agosto de 2025</p>
+    <p>📢 <strong>Publicación de resultados:</strong> 15 de septiembre de 2025</p>
+  </div>
+
+  <a href="https://forms.gle/your-google-form-id" target="_blank" class="inscription-btn">
+    Inscribirse
+  </a>
 </section>
+
 
   <section class="schedule-section">
     <div class="text">
-      <h2>Agenda</h2>
-      <div>
-        <img src={`${base}images/schedule-page.jpg`} alt="Agenda" />
+      <h2>🗓️ Programación</h2>
+      <div class="agenda-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Hora</th>
+              <th>2 de Octubre</th>
+              <th>3 de Octubre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>8:00–8:30</td>
+              <td>Apertura día 1 (BTS)</td>
+              <td>Apertura día 2 (TLM Andina)</td>
+            </tr>
+            <tr>
+              <td>8:30–9:30</td>
+              <td>Conferencia Magistral 1 – Prof. Sergio Lerma (España)</td>
+              <td>Conferencia Magistral 2 – Ing. Marcos Crespo (Argentina)</td>
+            </tr>
+            <tr>
+              <td>9:30–10:30</td>
+              <td>Ponencias (4) – Experiencias BTS en ambiente clínico</td>
+              <td>Ponencias (4) – Experiencias BTS en ambiente de riesgo laboral</td>
+            </tr>
+            <tr>
+              <td>10:30–11:00</td>
+              <td>Receso 1</td>
+              <td>Receso 2</td>
+            </tr>
+            <tr>
+              <td>11:00–12:00</td>
+              <td>Ponencias (4) – BTS en ambiente deportivo</td>
+              <td>Panel: Avances tecnológicos en evaluación motora</td>
+            </tr>
+            <tr>
+              <td>12:00–14:30</td>
+              <td>Almuerzo libre 1</td>
+              <td>Almuerzo libre 2</td>
+            </tr>
+            <tr>
+              <td>14:30–16:00</td>
+              <td>Taller práctico 1</td>
+              <td>Avances de investigación – estudiantes</td>
+            </tr>
+            <tr>
+              <td>16:00–16:30</td>
+              <td>Cierre día 1 – Sociedad de análisis de movimiento humano (BTS)</td>
+              <td>Cierre final – Entrega de certificados</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
   <section class="location">
-      <h2>Location</h2>
-      <p>Colombian School of Engineering Julio Garavito</p>
+      <h2>📍Ubicación</h2>
       <div style="max-width: 800px; margin: 0 auto;"></div>
       <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.925996551909!2d-74.04517872321934!3d4.782716240937396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f85e32ae0ca4b%3A0x5edd4c74e8f7220c!2sEscuela%20Colombiana%20de%20Ingenier%C3%ADa%20Julio%20Garavito!5e0!3m2!1ses!2sco!4v1750989891106!5m2!1ses!2sco"

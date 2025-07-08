@@ -2,7 +2,7 @@
 import LanguageSelector from '../components/LanguageSelector.astro';
 
 // Optional props for dynamic title and language
-const { title = 'My Event Site', lang = 'en', partnersLabel = 'Partners'} = Astro.props;
+const { title = 'My Event Site', lang = 'en', partnersLabel = 'Partners', contactLabel = 'Contact'} = Astro.props;
 const base = import.meta.env.BASE_URL;
 
 ---
@@ -25,6 +25,15 @@ const base = import.meta.env.BASE_URL;
     </main>
 
     <footer>
+        <div class="footer-contact">
+          <h2>{contactLabel}</h2>
+          <ul>
+            <li>📧<a href="mailto:gerenciacomercial@tlmandina.com.co">gerenciacomercial@tlmandina.com.co</a></li>
+            <li>📞<a href="tel:+573114461464">+57 311 4461464</a></li>
+            <li>📧<a href="mailto:financiero@tlmandina.com.co">financiero@tlmandina.com.co</a></li>
+            <li>📞<a href="tel:+573108019176">+57 310 8019176</a></li>
+          <ul>
+        </div>
         <h2>{partnersLabel}</h2>
         <div class="footer-logos">
             <img src={`${base}images/logo_eci.png`} alt="Partner 1" />
@@ -32,6 +41,7 @@ const base = import.meta.env.BASE_URL;
             <img src={`${base}images/logo_uvalle.png`} alt="Partner 3" />
             <img src={`${base}images/blue_logo.png`} alt="Partner 4" />
         </div>
+       
       <p>&copy; {new Date().getFullYear()} TLM Andina S.A.S</p>
     </footer>
   </body>

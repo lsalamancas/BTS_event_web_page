@@ -6,7 +6,6 @@ header {
   /* background: linear-gradient(to right, #001ea8, #022dd5); */
   color: #003366;
 }
-
 /* header::before {
   content: '';
   position: absolute;
@@ -23,18 +22,22 @@ header h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
+
 header h2 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
 }
+
 header p {
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
+
 footer{ 
   padding: 3rem 1rem;
   text-align: center;
   color: #003366;
 }
+
 body {
   background-color: #f7f3ee;
   background-image: radial-gradient(#003366 1px, transparent 1px);
@@ -43,6 +46,7 @@ body {
   background-attachment: fixed;
   color: #fff;
 }
+
 section {
   align-items: center;
   justify-content: center;
@@ -61,6 +65,13 @@ section:hover{
   transform: scale(1.05);
 }
 
+.event-date {
+  color: #003366;
+  background-color: #6daebb;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
 
 .language-selector {
   display: flex;
@@ -80,7 +91,6 @@ section:hover{
 .lang-option:hover {
   transform: scale(1.05);
 }
-
 
 .lang-option img {
   width: 24px;           /* Fixed width */
@@ -111,20 +121,20 @@ section:hover{
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(4px);
   border-radius: 12px;
-
 }
 
 .about-collage-layout .text {
   flex: 1;
   min-width: 280px;
   color: #003366;
+  font-size: 1.3rem;
 }
 
 .about-collage-layout .collage {
   flex: 1;
   min-width: 280px;
   display: flex;
-  flex-direction: column;
+  flex-direction:row;
   gap: 1rem;
 }
 
@@ -141,46 +151,37 @@ section:hover{
 
 
 .collage img {
-  height: 140px;
-  width: 100%;
-  object-fit: contain;
+  height: 11rem;
+  object-fit:cover;
   border-radius: 8px;
   transition: transform 0.4s ease, object-fit 0.4s ease;
-  position: relative;
   z-index: 0;
 }
 
-.collage img:hover {
-  transform: scale(1.2);
-  object-fit: contain;
-  background-color: #fff; /* Prevent gaps around image */
-  z-index: 1;
-}
 
-.collage .top-img img {
-  width: 100%;
-  height: 180px;
+.collage .left-img img {
+  flex: 1;
+  width: 105%;
+  height: 100%;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
 }
 
-
-
-.collage .bottom-imgs {
-  display: flex;
-  gap: 1rem;
-}
-
-.collage .bottom-imgs img {
+.collage .right-img img {
   flex: 1;
-  height: 140px;
+  height: 100%;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-
+.collage img:hover {
+  transform: scale(1.2);
+  object-fit: cover;
+  background-color: #fff; /* Prevent gaps around image */
+  z-index: 1;
+}
 
 
 .countdown-section {
@@ -239,6 +240,10 @@ section:hover{
   backdrop-filter: blur(4px);
 }
 
+.speaker-section h2{ 
+  font-size: 2.5rem;
+}
+
 .speaker-grid {
   display: flex;
   flex-wrap: wrap;
@@ -290,14 +295,15 @@ section:hover{
 }
 
 .global-logo {
-  position: fixed;
+  position: absolute;
   top: 1rem;
-  right: 4rem;
+  right: 1rem;
   width: 180px;
   z-index: 1000;
   pointer-events: none; /* So it doesn’t block clicks */
   opacity: 0.9;
 }
+
 
 .global-logo img {
   width: 100%;
@@ -326,6 +332,10 @@ section:hover{
   transition: transform 0.4s ease;
 }
 
+.schedule-section h2{
+  font-size: 2.5rem;
+}
+
 .inscription-section {
   background: linear-gradient(to right, #003366, #0055aa);
   color: #fff;
@@ -337,13 +347,13 @@ section:hover{
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-.inscription-text h2 {
+.inscription-section h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.inscription-text p {
-  font-size: 1.2rem;
+.inscription-section p {
+  font-size: 1.1rem;
   margin-bottom: 2rem;
 }
 
@@ -366,8 +376,64 @@ section:hover{
   color: #003366;
 }
 
+.abstract-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+  justify-content: center;
+}
+
+.abstract-box {
+  background-color: rgba(68, 117, 215, 0.388);
+  backdrop-filter: blur(6px);
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 400px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+
+}
+
+.abstract-box:hover{
+  transform: scale(1.1);
+  background: #318fe1;
+  color: #fff;
+}
+.abstract-deadlines p{
+  font-size: 1.3rem;
+}
+.agenda-table {
+  overflow-x: auto;
+  margin-top: 2rem;
+}
+
+.agenda-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(4px);
+}
+
+.agenda-table th,
+.agenda-table td {
+  border: 1px solid #ccc;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.agenda-table th {
+  background-color: #132644;
+  color: white;
+}
+
+.agenda-table td {
+  color: #132644;
+}
+
 .location {
-    border-radius: 12px;
+  border-radius: 12px;
   padding: 2rem;
   max-width: 960px;
   margin: 2rem auto;
@@ -379,6 +445,11 @@ section:hover{
   color: #003366;
   text-align: center;
 }
+.location h2{
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .footer-logos {
   display: flex;
   justify-content: center;
@@ -399,4 +470,21 @@ section:hover{
 .footer-logos img:hover {
   transform: scale(1.05);
   filter: grayscale(0);
+}
+
+.footer-contact {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #132644;
+}
+
+.footer-contact a {
+  color: #132644;
+  text-decoration: none;
+}
+
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
 }

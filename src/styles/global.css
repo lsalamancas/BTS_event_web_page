@@ -488,3 +488,87 @@ section:hover{
   padding: 0;
   margin: 0.5rem 0;
 }
+
+
+@media (max-width: 720px) {
+
+  header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  }
+
+  header h2 {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .countdown-timer {
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .countdown-timer div {
+    width: 42%;
+    padding: 0.8rem;
+  }
+
+  .countdown-timer div span {
+    font-size: 2rem;
+  }
+
+ .about-collage-layout .collage {
+    flex-direction: column;
+    align-items: center; /* 🔹 Centra horizontalmente los hijos (las imágenes) */
+    text-align: center;
+  }
+
+  .collage .left-img,
+  .collage .right-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .collage img {
+    width: 90%;
+    max-width: 320px; /* 🔹 Limita el ancho en pantallas pequeñas */
+    aspect-ratio: auto;
+  }
+  .speaker-section h2{
+    font-size: 1.5rem;
+  }
+
+  .inscription-section h2{
+    font-size: 1.5rem;
+  }
+
+  .schedule-section h2{
+    font-size: 1.5rem;
+  }
+  .location h2{
+    font-size: 1.5rem;
+  }
+  .global-logo {
+    position: static; /* Quita la posición absoluta */
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    width: 120px; /* Ajusta tamaño para móvil */
+    z-index: auto;
+    opacity: 1;
+  }
+
+  .global-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  }
+
+}
+

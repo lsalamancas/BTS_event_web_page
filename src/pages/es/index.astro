@@ -11,7 +11,7 @@ const base = import.meta.env.BASE_URL;
     <h1>SEMINARIO INTERNACIONAL</h1>
     <h2>Tendencias y futuro en el análisis del movimiento humano con tecnología BTS</h2>
     <p>
-      <span class="event-date">📅 <strong>2 y 3 de octubre</strong></span>
+      <span class="event-date">📅 <strong>2 y 3 de octubre 2025</strong></span>
     </p> 
     <p> en la <strong>Escuela Colombiana de Ingeniería Julio Garavito</strong>
     </p>
@@ -29,7 +29,7 @@ const base = import.meta.env.BASE_URL;
         <li>🌍 <strong>Modalidad:</strong> Híbrida (presencial y remota)</li>
         <li>💸 <strong>Costo:</strong> Participación gratuita</li>
         <li>🎁 <strong>Incentivo:</strong> El mejor trabajo presentado recibirá un obsequio especial</li>
-        <li>🇨🇴 <strong>Hito:</strong> Este evento marcará la fundación de la Sociedad Colombiana de Biomecánica</li>
+        <li>   <strong>Hito:</strong> Con este evento, se abre el camino hacia la conformación de la Sociedad Colombiana de Biomecánica.</li>
       </ul>
       <p><em>Construyamos juntos una comunidad donde el conocimiento se mueva y el movimiento impulse el progreso.</em></p>
     </div>
@@ -86,11 +86,17 @@ const base = import.meta.env.BASE_URL;
     <div class="abstract-box">
       <h3>👨‍⚕️ Usuarios de tecnología BTS</h3>
       <p>Si eres usuario de sistemas BTS, estás invitado a enviar un resumen de tu experiencia o aplicación clínica, deportiva o laboral.</p>
+      <a href={`${base}es/registration_presenter?tipo=bts`} class="inscription-btn">
+        Enviar resumen
+      </a>
     </div>
 
     <div class="abstract-box">
       <h3>🎓 Estudiantes</h3>
       <p>Los estudiantes pueden enviar trabajos de investigación en curso, resultados preliminares o propuestas relacionadas con el análisis del movimiento.</p>
+      <a href={`${base}es/registration_presenter?tipo=student`} class="inscription-btn">
+        Enviar resumen
+      </a>
     </div>
   </div>
 
@@ -98,9 +104,8 @@ const base = import.meta.env.BASE_URL;
     <p>📅 <strong>Fecha límite para envío de resúmenes:</strong> 20 de agosto de 2025</p>
     <p>📢 <strong>Publicación de resultados:</strong> 15 de septiembre de 2025</p>
   </div>
-
-  <a href="https://forms.gle/your-google-form-id" target="_blank" class="inscription-btn">
-    Inscribirse
+  <a href={`${base}es/registration_attend`} class="inscription-btn">
+    Registrarse en el evento
   </a>
 </section>
 
@@ -120,18 +125,22 @@ const base = import.meta.env.BASE_URL;
           <tbody>
             <tr>
               <td>8:00–8:30</td>
-              <td>Apertura día 1 (BTS)</td>
-              <td>Apertura día 2 (TLM Andina)</td>
+              <td>Apertura día 1 (Presentación BTS)</td>
+              <td rowspan="2">Conferencia Magistral 2 – Ing. Marcos Crespo (Argentina)</td>
             </tr>
             <tr>
-              <td>8:30–9:30</td>
-              <td>Conferencia Magistral 1 – Prof. Sergio Lerma (España)</td>
-              <td>Conferencia Magistral 2 – Ing. Marcos Crespo (Argentina)</td>
+              <td>8:30–9:00</td>
+              <td rowspan="2">Conferencia Magistral 1 – Prof. Sergio Lerma (España)</td>
             </tr>
+            <tr>
+              <td>9:00–9:30</td>
+              <td>Conferencia Magistral 3 – Dr Jose Luis Duplat (Colombia)</td>
+            </tr>
+
             <tr>
               <td>9:30–10:30</td>
-              <td>Ponencias (4) – Experiencias BTS en ambiente clínico</td>
-              <td>Ponencias (4) – Experiencias BTS en ambiente de riesgo laboral</td>
+              <td>Ponencias (4) – Experiencias usuarios BTS en ambiente clínico</td>
+              <td>Ponencias (4) – Experiencias usuarios BTS en ambiente de riesgo laboral</td>
             </tr>
             <tr>
               <td>10:30–11:00</td>
@@ -140,8 +149,8 @@ const base = import.meta.env.BASE_URL;
             </tr>
             <tr>
               <td>11:00–12:00</td>
-              <td>Ponencias (4) – BTS en ambiente deportivo</td>
-              <td>Panel: Avances tecnológicos en evaluación motora</td>
+              <td>Ponencias (4) – Experiencias usuarios BTS en ambiente deportivo</td>
+              <td>Panel de discución: Avances y tendencias tecnológicas en modelos de evaluación motora</td>
             </tr>
             <tr>
               <td>12:00–14:30</td>
@@ -154,13 +163,14 @@ const base = import.meta.env.BASE_URL;
               <td>Avances de investigación – estudiantes</td>
             </tr>
             <tr>
-              <td>16:00–16:30</td>
-              <td>Cierre día 1 – Sociedad de análisis de movimiento humano (BTS)</td>
+              <td>16:00–16:30</td>S
+              <td>Cierre día 1 – Sociedad Colombiana de Biomecánica</td>
               <td>Cierre final – Entrega de certificados</td>
             </tr>
           </tbody>
         </table>
       </div>
+      <p>El 16 de septiembre se actualizará la agenda con los títulos de las ponencias</p>
     </div>
   </section>
 

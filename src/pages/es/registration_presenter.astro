@@ -1,0 +1,65 @@
+---
+import "../../styles/global.css";
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+
+---
+
+
+<BaseLayout title="Seminario Internacional BTS Colombia " lang="es" partnersLabel="Patrocinadores", contactLabel="Contacto">
+  <section class="scientific-committee">
+  <h2>👨‍🔬 COMITÉ CIENTÍFICO DEL SEMINARIO INTERNACIONAL</h2>
+
+  <p><strong>Directores científicos:</strong> Lessby Gómez Salazar, Ph.D y Luis Eduardo Rodríguez Cheu, Ph.D.</p>
+  <ul>
+    <li>1. Héctor Jaramillo Suarez, Ph.D – Universidad del Valle</li>
+    <li>2. Juan Diego Pulgarín, Ph.D – Universidad Nacional</li>
+    <li>3. Gloria Patricia Arango, Mgs – Universidad del Valle</li>
+    <li>4. Luz Edith Pérez Trejos, Mgs – Universidad del Valle</li>
+    <li>5. Carlos Alberto Castillo Daza, Mgs – Fundación Universitaria del Área Andina</li>
+    <li>6. Jonnier Sebastián Jaramillo, Ph.D – Universidad del Rosario</li>
+    <li>7. Jenny Carolina Castiblanco Sánchez, Ph.D – Escuela Colombiana de Ingeniería Julio Garavito</li>
+    <li>8. Daniel Ricardo Suarez Venegas, Ph.D – Universidad Javeriana sede Bogotá</li>
+    <li>9. Paula Milena Buitrago Florián, Mgs – Universidad del Bosque</li>
+    <li>10. Wilson Alexander Sierra Arévalo, Ing. – Escuela Colombiana de Ingeniería Julio Garavito</li>
+    <li>11. Pablo Eduardo Caicedo Rodríguez, Ph.D – Escuela Colombiana de Ingeniería Julio Garavito</li>
+  </ul>
+  </section>
+
+  <section class="submission-guidelines">
+    <!-- <p>Tipo detectado: {params}</p> -->
+
+  <h2>📄 Pautas para el envío de resúmenes</h2>
+  <p>Revisa el documento con las instrucciones sobre formato, contenido y extensión antes de completar el formulario.</p>
+  <a href={`${base}/Plantilla_Resumen_Seminario_BTS.pdf`} target="_blank" class="guideline-btn">
+  📥 Descargar pautas en PDF
+  </a>
+  <a id="formulario-link" class="guideline-btn">
+    📤 Subir resumen PDF
+  </a>
+  <script>
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const params = Object.fromEntries(urlSearchParams.entries());
+  const tipo = params.tipo;
+  // console.log(tipo)
+  const link = tipo === "bts"
+   ? "https://docs.google.com/forms/d/e/1FAIpQLSeEJJyRlQie7VbNgY-ku2u6PNMysYboA2tryDAnd5KfmjrWxA/viewform?usp=pp_url&entry.1521862496=Usuario+de+tecnolog%C3%ADa+BTS"
+   : "https://docs.google.com/forms/d/e/1FAIpQLSeEJJyRlQie7VbNgY-ku2u6PNMysYboA2tryDAnd5KfmjrWxA/viewform?usp=pp_url&entry.1521862496=Estudiante";
+   const anchor = document.getElementById("formulario-link");
+    if (anchor) {
+      anchor.href = link;
+      anchor.textContent = tipo === "bts"
+        ? "📤 Subir experiencia BTS"
+        : "📤 Subir resumen como estudiante";
+    }
+
+</script>
+  <!-- </section>
+  <section class="speaker-section">
+    <h2>📝 Inscripción</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfO8vs5Htznuwv0-vx3_oGwzaxboFEDcYnVqNu0LEcLNbS8Ew/viewform?embedded=true" width="100%" height="800">
+      Cargando…
+    </iframe>
+  </section> -->
+</BaseLayout>

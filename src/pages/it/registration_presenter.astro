@@ -1,0 +1,53 @@
+---
+import "../../styles/global.css";
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Seminario Internazionale BTS Colombia" lang="it" partnersLabel="Partner" contactLabel="Contatto">
+  <section class="scientific-committee">
+    <h2>👨‍🔬 COMITATO SCIENTIFICO DEL SEMINARIO INTERNAZIONALE</h2>
+
+    <p><strong>Direttori Scientifici:</strong> Lessby Gómez Salazar, Ph.D e Luis Eduardo Rodríguez Cheu, Ph.D.</p>
+    <ul>
+      <li>1. Héctor Jaramillo Suarez, Ph.D – Universidad del Valle</li>
+      <li>2. Juan Diego Pulgarín, Ph.D – Universidad Nacional</li>
+      <li>3. Gloria Patricia Arango, Mgs – Universidad del Valle</li>
+      <li>4. Luz Edith Pérez Trejos, Mgs – Universidad del Valle</li>
+      <li>5. Carlos Alberto Castillo Daza, Mgs – Fundación Universitaria del Área Andina</li>
+      <li>6. Jonnier Sebastián Jaramillo, Ph.D – Universidad del Rosario</li>
+      <li>7. Jenny Carolina Castiblanco Sánchez, Ph.D – Escuela Colombiana de Ingeniería Julio Garavito</li>
+      <li>8. Daniel Ricardo Suarez Venegas, Ph.D – Universidad Javeriana, sede Bogotá</li>
+      <li>9. Paula Milena Buitrago Florián, Mgs – Universidad del Bosque</li>
+      <li>10. Wilson Alexander Sierra Arévalo, Ing. – Escuela Colombiana de Ingeniería Julio Garavito</li>
+      <li>11. Pablo Eduardo Caicedo Rodríguez, Ph.D – Escuela Colombiana de Ingeniería Julio Garavito</li>
+    </ul>
+  </section>
+
+  <section class="submission-guidelines">
+    <h2>📄 Linee guida per l'invio del riassunto</h2>
+    <p>Si prega di consultare il documento con le istruzioni riguardanti formato, contenuto ed estensione prima di compilare il modulo di invio.</p>
+    <a href={`${base}/Abstract_Template_Seminar_BTS.pdf`} target="_blank" class="guideline-btn">
+      📥 Scarica il PDF con le linee guida
+    </a>
+    <a id="formulario-link" class="guideline-btn">
+      📤 Carica il riassunto PDF
+    </a>
+    <script>
+      const urlSearchParams = new URLSearchParams(window.location.search);
+      const params = Object.fromEntries(urlSearchParams.entries());
+      const tipo = params.tipo;
+
+      const link = tipo === "bts"
+        ? "https://docs.google.com/forms/d/e/1FAIpQLSfIch6rVgFc_aHOj2UUrmQzugll45-ddLwhZOGcZp6FnWmqQQ/viewform?usp=pp_url&entry.1521862496=BTS+Techonology+User"
+        : "https://docs.google.com/forms/d/e/1FAIpQLSfIch6rVgFc_aHOj2UUrmQzugll45-ddLwhZOGcZp6FnWmqQQ/viewform?usp=pp_url&entry.1521862496=Student";
+      const anchor = document.getElementById("formulario-link");
+      if (anchor) {
+        anchor.href = link;
+        anchor.textContent = tipo === "bts"
+          ? "📤 Carica esperienza BTS"
+          : "📤 Carica riassunto come studente";
+      }
+    </script>
+  </section>
+</BaseLayout>
